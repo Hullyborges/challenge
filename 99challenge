@@ -1,5 +1,5 @@
 consulta ao banco de dados
 
-'''sql
+```sql
 select * from trips
-'''
+```
