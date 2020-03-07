@@ -1,0 +1,5 @@
+consulta ao banco de dados
+
+'''sql
+select * from trips
+'''
