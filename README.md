@@ -48,10 +48,12 @@ select
    sum(fare_amount  )                              as paid_trip
     from trips
     group by 1,2,3
-    ```
- 
- 
+
+
+```
  Informações de passageiros
+ 
+ 
    ```sql
    select *
    from 
