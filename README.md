@@ -16,9 +16,9 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
     Grupo de  indicadores: Financeiro, Produtividade/Capacidade de atendimento e Qualidade
     
    Financeiro: Acompanhar o crescimento da receita
-                * Crescimento da receita
-                * Ticket médio 
-                * LTV 
+   * Crescimento da receita
+   * Ticket médio 
+   * LTV 
                 
    Produtividade/capacidade de atendimento 
     
