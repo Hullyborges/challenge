@@ -73,7 +73,7 @@ group by 1
 )main
 ```
 
-   Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de escalável  e de forma automática por meio da conexão com o banco de dados  
+   Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de possuir um ainterface "amigavel", facil conecção com banco de dados e de compartilhamento 
     
     
    
