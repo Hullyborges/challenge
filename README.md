@@ -15,16 +15,13 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
  Missão :  Se tornar lider no mercado oferendo aos clientes menor preço, viagens mais rápidas e qualidade
     Grupo de  indicadores: Financeiro, Produtividade/Capacidade de atendimento e Qualidade
     
-   Financeiro: Acompanhar o crescimento da receita
-   * Crescimento da receita
-   * Ticket médio 
-   * LTV 
+   **Financeiro**: O quano sustentável está o negócio
                 
-   Produtividade/capacidade de atendimento 
+  **Produtividade/capacidade de atendimento** : Escalabilidade
+   
+   **Qualidade**:  
     
-   Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de escalável  e de forma automática por meio da conexão com o banco de dados  
-    
- Tabela de totais 
+ Tabela de totais  - Essa query será usada para construir a consulta  do panorama geral de viagens Como Total de viagens, passageiros, motoristas, receita gerada total, % de receita por meio de pagamento, % de receita por tipo de corrida
  ```sql
 select 
     date_trunc('day', pickup_datetime )::date       as dia       ,
@@ -51,7 +48,7 @@ select
 
 
 ```
- Informações de passageiros
+ Tabela de corridas - Essa query utiliza a estrutura simplificada da tabela "trips" para criar consultas sobre tempo médio por viagem, preço por milhas, ticke médio, LTV, distribuição de corrida por horário 
  
  
    ```sql
@@ -68,6 +65,8 @@ from trips
 group by 1
 )main
 ```
+
+   Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de escalável  e de forma automática por meio da conexão com o banco de dados  
     
     
    
