@@ -16,7 +16,19 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
    select * from orders;
    select * from trips;
    ```
-   
+ Observando as duas tabelas percebi que "orders" contém os mesmo dados que "trips", fiz apenas um teste para verificar que não existe diferença
+ 
+ ```sql
+ select
+       orders.pickup_latitude  - trips .pickup_latitude    as lat_difer ,
+       orders.pickup_longitude  - trips .pickup_longitude  as lng_difer
+       from orders 
+       join trips 
+           on orders.order_id = trips.order_id 
+           group by 1,2
+           order by 1
+```
+
 ## 2. Contrstução dos KPIs e dashboard
    
  Missão :  Se tornar lider no mercado oferendo aos clientes menor preço, viagens mais rápidas e qualidade
