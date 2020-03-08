@@ -10,21 +10,20 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
    
    Para observar os dados conectei o banco ao programa R. Essa análise exploratória pode ser vista neste link
    
-   ## 2. Contrstução dos KPIs e dashboard
-    
-    Baseado nos dados disponiveis e 
-    
-    Missão :  Se tornar lider no mercado oferendo aos clientes menor preço, viagens mais rápidas e qualidade
+## 2. Contrstução dos KPIs e dashboard
+   
+ Missão :  Se tornar lider no mercado oferendo aos clientes menor preço, viagens mais rápidas e qualidade
     Grupo de  indicadores: Financeiro, Produtividade/Capacidade de atendimento e Qualidade
     
-    Financeiro: Acompanhar o crescimento da receita
+   Financeiro: Acompanhar o crescimento da receita
                 * Crescimento da receita
                 * Ticket médio 
                 * LTV 
                 
-    Produtividade/capacidade de atendimento 
+   Produtividade/capacidade de atendimento 
     
-    Usei como ferramenta de visualização o Tableau public 
+   Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de escalável  e de forma automática por meio da conexão com o banco de dados  
+    
     
    
    Informações de passageiros
