@@ -26,7 +26,7 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
     
  Tabela de totais 
  ```sql
- select 
+select 
     date_trunc('day', pickup_datetime )::date       as dia       ,
     case when rate_code  =1 then 'Standard_rate'
          when rate_code  =2 then 'JFK'
@@ -34,13 +34,18 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
          when rate_code  =4 then 'Nassau_westchester'
          when rate_code  =5 then 'Negotiated_fare'
          when rate_code  =6 then 'group_ride'
-                                             end   as rate        ,
-        payment_type                               as forma_pagto ,
-   sum(order_id )                                  as corridas    ,                                     
-   count(distinct passenger_id )                   as passageiros ,
-   count(distinct driver_id    )                   as motoristas  ,
-  round(sum(total_amount )::integer,2)             as total_pago  ,
-   sum(fare_amount  )                              as total_viagem
+         end                                       as rate        ,
+    case when payment_type ='CRD' then 'credit_card'
+         when payment_type ='CSH' then  'cash'
+         when payment_type ='DIS' then 'dispute'
+         when payment_type ='UNK' then 'unknown'
+         when payment_type ='NOC'then 'no_charge'
+         end                                       as pay_type ,
+   sum(order_id )                                  as total_orders    ,                                     
+   count(distinct passenger_id )                   as passagers ,
+   count(distinct driver_id    )                   as total_drivers  ,
+  round(sum(total_amount )::integer,2)             as paid_amount  ,
+   sum(fare_amount  )                              as paid_trip
     from trips
     group by 1,2,3
     ```
