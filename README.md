@@ -8,7 +8,14 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
 
 ## 1. Análise Exploratória
    
-   Para observar os dados conectei o banco ao programa R. Essa análise exploratória pode ser vista neste link
+   Realizei a analise da base diretamente no SQL para entender quais dados estão disponíveis
+   
+   Observação das tablelas
+   
+   ```sql
+   select * from orders;
+   select * from trips;
+   ```
    
 ## 2. Contrstução dos KPIs e dashboard
    
