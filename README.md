@@ -71,18 +71,20 @@ select
  
  
    ```sql
-   select *
-   from 
-     (select distinct 
-       passenger_id          as passageiro,
-       count(order_id)       as viagens_realizadas,
-       max(pickup_datetime ) as ultima_viagem,
-       min(pickup_datetime ) as primeira_viagem,
-       sum(total_amount)     as valor_total_pago,
-       sum(fare_amount)      as valor_viagem
-from trips
-group by 1
-)main
+select 
+      order_id          as viagem_id       ,
+      passenger_id      as passageiro      ,
+      driver_id         as motorista       ,
+      pickup_datetime   as viagem_inicio   ,
+      dropoff_datetime  as viagem_fim      ,
+      pickup_latitude   as inicio_latitude ,
+      pickup_longitude  as inicio_longitude,  
+      dropoff_latitude  as fim_latitude    ,
+      dropoff_longitude as fim_longitude   ,
+      trip_distance     as di_percorrida_mi,
+      total_amount      as valor_total     ,
+      fare_amount       as valor_viagem    
+from trips 
 ```
 
    Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de possuir um ainterface "amigavel", facil conecção com banco de dados e de compartilhamento 
