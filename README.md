@@ -11,9 +11,18 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
    Para observar os dados conectei o banco ao programa R. Essa análise exploratória pode ser vista neste link
    
    ## 2. Contrstução dos KPIs e dashboard
-    Baseado nos ddos disponiveis e 
     
-    Principais indicadores: Financeiro, Produtividade/Capacidade de atendimento e Qualidade
+    Baseado nos dados disponiveis e 
+    
+    Missão :  Se tornar lider no mercado oferendo aos clientes menor preço, viagens mais rápidas e qualidade
+    Grupo de  indicadores: Financeiro, Produtividade/Capacidade de atendimento e Qualidade
+    
+    Financeiro: Acompanhar o crescimento da receita
+                * Crescimento da receita
+                * Ticket médio 
+                * LTV 
+                
+    Produtividade/capacidade de atendimento 
     
     Usei como ferramenta de visualização o Tableau public 
     
