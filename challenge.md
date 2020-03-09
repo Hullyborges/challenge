@@ -1,10 +1,11 @@
-# challenge
+# Challenge 99
 
-Diante do desafio proposto pela 99, meu objetivo foi criar  
+Diante do desafio proposto pela 99, meu objetivo foi criar, a partir de dados de viagens, métricas que ajudassem a entender a performance da empresa.
 
+O processo foi realizado nas seguintes etapas:
 1. Analise exploratória dos dados e preparação dos dados
-2. Construição dos KPIs baseados nos dados dispoíveis e alinhados com os objetivos e missão da empresa
-3. Analise final e conclusão dos dados
+2. Construção dos KPIs baseados nos dados disponíveis e alinhados com os objetivos e missão da empresa
+3. Analise dos KPIs e conclusão dos dados
 
 ## 1. Análise Exploratória
    
@@ -13,10 +14,14 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
    Observação das tablelas
    
    ```sql
-   select * from orders;
-   select * from trips;
+   select * 
+         from orders  -- relacao de viagens solicitadas (ponto de partida/chegada), ID passageiro, forma de pgto
+         limit 100;
+   select * 
+          from trips  -- historico de viagens solicitadas, forma de pagamento, valor pago, bandeira, ID passageiro e motorista
+          limit 100;
    ```
- Observando as duas tabelas percebi que "orders" contém os mesmo dados que "trips", fiz apenas um teste para verificar que não existe diferença
+ Observando as duas tabelas percebi que "orders" contém os mesmos dados que "trips", fiz apenas um teste para verificar que não existe diferença entre os destinos
  
  ```sql
  select
@@ -28,8 +33,9 @@ Diante do desafio proposto pela 99, meu objetivo foi criar
            group by 1,2
            order by 1
 ```
+Nesse caso, resolvi seguir a analise com a tabela *trips*
 
-## 2. Contrstução dos KPIs e dashboard
+## 2. Construção dos KPIs e dashboard
    
  Missão :  Se tornar lider no mercado oferendo aos clientes menor preço, viagens mais rápidas e qualidade
     Grupo de  indicadores: Financeiro, Produtividade/Capacidade de atendimento e Qualidade
