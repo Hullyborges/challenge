@@ -65,19 +65,33 @@ select
  
    ```sql
 select 
-      order_id          as viagem_id       ,
-      passenger_id      as passageiro      ,
-      driver_id         as motorista       ,
-      pickup_datetime   as viagem_inicio   ,
-      dropoff_datetime  as viagem_fim      ,
-      pickup_latitude   as inicio_latitude ,
-      pickup_longitude  as inicio_longitude,  
-      dropoff_latitude  as fim_latitude    ,
-      dropoff_longitude as fim_longitude   ,
-      trip_distance     as di_percorrida_mi,
-      total_amount      as valor_total     ,
-      fare_amount       as valor_viagem    
+   order_id          as viagem_id       ,
+    case when rate_code  =1 then 'Standard_rate'
+        when rate_code  =2 then 'JFK'
+        when rate_code  =3 then 'Newark'
+        when rate_code  =4 then 'Nassau_westchester'
+        when rate_code  =5 then 'Negotiated_fare'
+        when rate_code  =6 then 'group_ride'
+        end                                       as rate        ,
+   case when payment_type ='CRD' then 'credit_card'
+        when payment_type ='CSH' then  'cash'
+        when payment_type ='DIS' then 'dispute'
+        when payment_type ='UNK' then 'unknown'
+        when payment_type ='NOC'then 'no_charge'
+        end                                       as payment_type ,
+   passenger_id      as passageiro      ,
+   driver_id         as motorista       ,
+   pickup_datetime   as viagem_inicio   ,
+   dropoff_datetime  as viagem_fim      ,
+   pickup_latitude   as inicio_latitude ,
+   pickup_longitude  as inicio_longitude,  
+   dropoff_latitude  as fim_latitude    ,
+   dropoff_longitude as fim_longitude   ,
+   trip_distance     as di_percorrida_mi,
+   total_amount      as valor_total     ,
+   fare_amount       as valor_viagem    
 from trips 
+limit 1000 
 ```
 
    Ferramenta: Optei por utilizar o Tableau, já que é a ferramenta de BI usada pela empresa além de possuir um ainterface "amigavel", facil conecção com banco de dados e de compartilhamento 
