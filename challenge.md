@@ -63,8 +63,8 @@ select
          when payment_type ='UNK' then 'unknown'
          when payment_type ='NOC'then 'no_charge'
          end                                       as pay_type ,
-   sum(order_id )                                  as total_orders    ,                                     
-   count(distinct passenger_id )                   as passagers ,
+   count(order_id )                                  as total_orders    ,                                     
+   count(distinct passenger_id )                   as passagers ,        
    count(distinct driver_id    )                   as total_drivers  ,
   round(sum(total_amount )::integer,2)             as paid_amount  ,
    sum(fare_amount  )                              as paid_trip
